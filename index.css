@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    position: relative; 
+}
+.resultArea{
+    background-image: url('bg.gif');
+    background-size: 50vw 100vh;
+    width: 50vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #1e1d1c;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.score{
+   margin-left: 15vw;
+   padding: 2vw 0.01vw;
+}
+#hieScoreBox{
+    display: none;
+    margin-left: 15vw;
+    padding: 2vw 0.01vw;
+ }
+.snackArea{
+    background: #9a9999;
+    width: 50vw;
+    height: 100vh;
+    position: relative; 
+}
+ .ground{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #ceddf0;
+    width: 40vw;
+    height: 40vw;
+    top: 10vh;  
+    left: 5vw;
+    position: absolute;
+    grid-template-columns: repeat(18,1fr); 
+    grid-template-rows: repeat(18,1fr); 
+    border-radius: 4px;
+}
+.head{
+    height: 20px;
+    width: 20px;
+    background:linear-gradient(rgb(160, 160, 4),rgb(11, 217, 11));
+    border-radius: 18%;
+ 
+}
+.snake{
+    height: 17px;
+    width: 17px;
+border-radius: 12%;
+    background: linear-gradient(rgb(157, 157, 9),rgb(4, 146, 13));
+ 
+}
+.food{
+    width: 17px;
+    height: 17px;
+    background:linear-gradient(rgb(5, 144, 172),rgb(109, 85, 3));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40%;
+}
+@media (max-width:450px){
+    .container{
+        display: grid;
+    }
+    .snackArea{
+        background: #9a9999;
+        width: 100vw;
+        height: 50vh;
+        position: relative; 
+    }
+    .resultArea{
+        background-image: url('bg.gif');
+        background-size: 100vw 50vh;
+        width: 100vw;
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #1e1d1c;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    .ground{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        background: #828385;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        grid-template-columns: repeat(18,1fr); 
+        grid-template-rows: repeat(18,1fr); 
+        border-radius: 4px;
+    }
+    .score{
+       font-weight: bold;
+       font-family: sans-serif;
+            margin-left: 5vw;
+            padding: 20vh 0.2vw;
+       font-size: 40px;
+       color: rgb(253, 251, 251);
+    }
+    #hieScoreBox{
+        display: none;
+        font-weight: bold;
+        font-family: sans-serif;
+             margin-left: 5vw;
+             padding: 20vh 0.2vw;
+        font-size: 40px;
+        color: rgb(253, 251, 251);
+     }
+    .head{
+        height: 25px;
+        width: 25px;
+        background:linear-gradient(rgb(237, 237, 124),rgb(243, 184, 74));
+        border-radius: 13%;
+     
+    }
+    .snake{
+        height: 23px;
+        width: 23px;
+    border-radius: 12%;
+        background: linear-gradient(rgb(245, 245, 187),rgb(93, 249, 104));
+     
+    }
+    .food{
+        width: 22px;
+        height: 22px;
+        background:linear-gradient(rgb(104, 222, 246),rgb(246, 211, 94));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 40%;
+    }
+}
